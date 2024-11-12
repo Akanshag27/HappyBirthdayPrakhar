@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Love</title>
+<style>
+    /* Background with light red and hearts */
+    body {
+        background-color: #ffe6e6; /* very light red */
+        background-image: url('https://cdn.pixabay.com/photo/2016/12/17/20/50/heart-1918906_1280.png'); /* heart image */
+        background-size: 50px 50px;
+        background-repeat: repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Heading styling */
+    h1 {
+        color: #b30000; /* dark red */
+        font-size: 3rem;
+        margin-bottom: 70px; /* Increased bottom margin for more space */
+    }
+
+    /* Card Container */
+    .card-container {
+        display: flex;
+        gap: 30px; /* Increased gap between cards */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Card Styling */
+    .card {
+        width: 250px; /* Increased width */
+        height: 200px; /* Increased height */
+        background-color: #b30000; /* dark red */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+        font-size: 20px; /* Increased font size */
+        text-align: center;
+        position: relative;
+    }
+
+    /* Hover Effect */
+    .card:hover {
+        transform: scale(1.1);
+        background-color: #8b0000; /* darker red */
+    }
+
+    /* Link Styling */
+    .card a {
+        display: none;
+        color: blue;
+        font-weight: bold;
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+
+    /* Show the link after clicking */
+    .card.show-link span {
+        display: none;
+    }
+    .card.show-link a {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<h1>Happy Birthday Love</h1>
+
+<div class="card-container">
+    <div class="card" onclick="showLink(this)">
+        <span>Click me for the surprise love</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSepiN4DlO5GjOU-MWk9Bm5IKyK-k3_3IWP6pAiCDfEpNRMLkg/viewform?usp=sf_link" target="_blank">Surprise Link</a>
+    </div>
+    <div class="card" onclick="showLink(this)">
+        <span>Click me for the surprise love</span>
+        <a href="https://www.canva.com/design/DAGWRzFe5qc/vGcePv7fbvPEo_cD-oLSmQ/view?utm_content=DAGWRzFe5qc&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">Surprise Link</a>
+    </div>
+    <div class="card" onclick="showLink(this)">
+        <span>Click me for the surprise love</span>
+        <a href="https://www.canva.com/design/DAGWTS8aKCE/Hb9bAVQ_v6tLgD_hRLQLtg/watch?utm_content=DAGWTS8aKCE&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">Surprise Link</a>
+    </div>
+    <div class="card" onclick="showLink(this)">
+        <span>Click me for the surprise love</span>
+        <a href="https://www.canva.com/design/DAGWThz2Sy0/5UqN14mYoXj14dAgYfl6Bw/watch?utm_content=DAGWThz2Sy0&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">Surprise Link</a>
+    </div>
+</div>
+
+<script>
+    function showLink(card) {
+        // Show the link and hide the initial text
+        card.classList.add("show-link");
+
+        // Remove the link after 10 seconds
+        setTimeout(() => {
+            card.classList.remove("show-link");
+        }, 10000);
+    }
+</script>
+
+</body>
+</html>
